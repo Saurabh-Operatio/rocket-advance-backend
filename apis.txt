@@ -1,0 +1,18 @@
+-------------------------- User ---------------------------
+
+1). POST `http://{host}/api/user/register`
+    Content-Type: application/json
+    Body: {"email": string, "password": string, "role": string, "fullname": string}
+    Response: Status Code 201 - {"message": User registered successfully}
+
+2). POST `http://{host}/api/user/login`
+    Content-Type: application/json
+    Body: {"email": string, "password": string}
+    Response: Status Code 200 - {token: "Jwt-Token"}
+
+3). GET `http://{host}/api/user`
+    Authorization: JWT Token
+    Content-Type: application/json
+    Response: Status Code 200 - {user: {"email": string, "role": string, "fullname": string}}
+
+------------------------------------------------------------
