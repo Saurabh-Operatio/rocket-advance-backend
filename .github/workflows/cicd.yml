@@ -2,8 +2,8 @@ name: Build and Push Docker Image (with dynamic tag)
 
 on:
   push:
-  #  branches:
-     # - development
+    branches:
+      - development
 
 jobs:
   build-and-deploy:
@@ -56,5 +56,5 @@ jobs:
             grep -A2 'container_name: rocket-advance-backend' docker-compose.yaml
 
             echo "Pulling and restarting 'rocket-advance-backend' container..."
-            docker-compose pull investor
+            docker-compose pull rocket-advance-backend
             docker-compose up -d --no-deps --force-recreate rocket-advance-backend
