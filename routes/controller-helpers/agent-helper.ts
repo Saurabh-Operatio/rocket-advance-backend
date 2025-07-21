@@ -463,7 +463,7 @@ export const getOfferWidgets = async (user: IUser, res: Response) => {
 
       const isEligible =
         (deal.Stage === DEAL_STAGES.NEW_DEAL ||
-          deal.Stage === DEAL_STAGES.PRE_APPROVAL_SENT) &&
+          deal.Stage === DEAL_STAGES.PRE_APPROVAL_SENT  || deal.Stage === DEAL_STAGES.Pre_Approval_Expired ) &&
         deal.Verification_Form_Submitted === false &&
         deal.Verification_Form &&
         deal.Client_Gets;
