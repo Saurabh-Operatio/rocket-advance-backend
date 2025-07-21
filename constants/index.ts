@@ -206,6 +206,7 @@ export const DEAL_STAGES = {
   FUNDED: "Funded",
   DEAL_FULLY_CLOSED: "Deal Fully Closed",
   DENIED: "Denied",
+  Pre_Approval_Expired: "Pre Approval Expired",
 };
 
 // deals filter
